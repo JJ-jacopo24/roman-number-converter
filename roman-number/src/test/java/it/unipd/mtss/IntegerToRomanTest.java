@@ -1,0 +1,23 @@
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+//  JACOPO FRANCO  2145358
+//  MATTEO CETRARO 2138000
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+package it.unipd.mtss;
+
+import org.junit.Test;
+
+import static org.junit.Assert.*;
+
+public class IntegerToRomanTest {
+
+    @Test
+
+    public void placeholder() {
+
+        // TODO: verranno aggiunti test reali
+
+        assertTrue(true);
+
+    }
+
+}
