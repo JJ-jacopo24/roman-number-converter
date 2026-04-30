@@ -1,0 +1,40 @@
+# Pipeline di Continuous Integration per il progetto Roman Number
+# Si attiva ad ogni push e ad ogni Pull Request
+
+name: Continuous Integration
+
+on:
+  push:
+    branches: ["main", "feature-*"]
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+
+      # Step 1: Scarica il codice dalla repository
+      - name: Checkout del codice sorgente
+        uses: actions/checkout@v3
+
+      # Step 2: Configura Java 11
+      - name: Configurazione java 11
+        uses: actions/setup-java@v3
+        with:
+          java-version: '11'
+          distribution: 'temurin'
+          cache: maven
+
+      # Step 3: Compilazione del progetto (fase compile)
+      - name: Compilazione
+        run: mvn compile --file roman-number/pom.xml
+
+      # Step 4: Esecuzione dei test (fase test)
+      - name: Esecuzione Test
+        run: mvn test --file roman-number/pom.xml
+
+      # Step 5: Analisi statica e package
+      - name: Analisi Statica e Package
+        run: mvn package --file roman-number/pom.xml
