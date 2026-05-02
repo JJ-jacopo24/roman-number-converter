@@ -6,18 +6,14 @@ package it.unipd.mtss;
 
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 public class IntegerToRomanTest {
-
     @Test
-
-    public void placeholder() {
-
-        // TODO: verranno aggiunti test reali
-
-        assertTrue(true);
-
+    public void convertTest() {
+        IntegerToRoman integer = new IntegerToRoman();
+        String t = IntegerToRoman.convert(3);
+        assertEquals("III", t);
     }
 
 }
