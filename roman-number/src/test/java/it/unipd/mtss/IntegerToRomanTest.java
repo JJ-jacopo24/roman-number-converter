@@ -12,8 +12,15 @@ public class IntegerToRomanTest {
     @Test
     public void convertTest() {
         IntegerToRoman integer = new IntegerToRoman();
-        String t = IntegerToRoman.convert(3);
-        assertEquals("III", t);
+        String t = IntegerToRoman.convert(2);
+        assertEquals("II", t);
+    }
+
+    @Test
+    public void converTest2(){
+        IntegerToRoman integer = new IntegerToRoman();
+        String t = IntegerToRoman.convert(5);
+        assertEquals("V",t);
     }
 
 }
