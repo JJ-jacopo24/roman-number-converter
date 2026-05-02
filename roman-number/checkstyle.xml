@@ -2,7 +2,53 @@
 <!DOCTYPE module PUBLIC "-//Puppy Crawl//DTD Check Configuration 1.2//EN"
 "http://www.puppycrawl.com/dtds/configuration_1_2.dtd">
 <module name="Checker">
+    <!-- Controllo su header -->
     <module name="Header">
     <property name="headerFile" value="header.txt"/>
-  </module>
+    </module>
+
+    <module name="FileLength">
+        <property name="max" value="300"/>
+    </module>
+    <module name="LineLength">
+        <property name="max" value="150"/>
+    </module>
+    <!-- Non si può usare tab -->
+    <module name="FileTabCharacter">
+        <property name="eachLine" value="false"/>
+    </module>
+
+    
+
+    <!-- Controllo su file java -->
+    <module name="TreeWalker">
+        <module name="MethodLength">
+            <property name="max" value="150"/>
+            <!-- Le righe vuote e i commenti non vengono contati -->
+            <property name="countEmpty" value="false"/>
+        </module>
+        <module name="BooleanExpressionComplexity">
+            <property name="max" value="4"/>
+        </module>
+        <!-- Numero massimo 10 come consigliato per un buon code design -->
+        <module name="CyclomaticComplexity">
+        <property name="max" value="11"/>
+            <!-- Lo switch lo consideriamo come un solo punto -->
+            <property name="switchBlockAsSingleDecisionPoint" value="true"/>
+        </module>
+        <!-- Blocchi vuoti ma con commeto = ok -->
+        <module name="EmptyCatchBlock">
+        </module>
+        <!-- Non si può importare tutta la libreria -->
+        <module name="AvoidStarImport">
+        </module>
+        <!-- Vietiamo l'import di queste classi -->
+        <module name="IllegalImport">
+            <property name="illegalClasses" value="java.util.Date,java.util.Calendar"/>
+        </module>
+        <!-- Bisogna sempre usare le {}-->
+        <module name="NeedBraces">
+        </module>    
+
+    </module>
 </module>
