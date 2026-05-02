@@ -9,12 +9,23 @@ public class IntegerToRoman {
 
         String s="";
         for(int i=0; i<100; i++){
+            switch(number){
+                case 0:
+                    return s;
+                case 4:
+                    s += "IV";
+                    number -= 4;
+                    continue;
+            }
+            if(number>=5){
+                s += "V";
+                number -= 5;
+                continue;
+            }
             if(number>=1){
                 s += "I";
                 number--;
-            }
-            if(number==0){
-                return s;
+                continue;
             }
         }
         return s;
