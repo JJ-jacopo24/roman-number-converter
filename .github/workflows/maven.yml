@@ -27,19 +27,7 @@ jobs:
           distribution: 'temurin'
           cache: maven
 
-      # Step 3: Compilazione del progetto (fase compile)
-      - name: Compilazione
-        run: mvn compile --file roman-number/pom.xml
-
-      # Step 4: Esecuzione dei test (fase test)
-      - name: Esecuzione Test
-        run: mvn test --file roman-number/pom.xml
-
-      # Step 5: Analisi statica e package
+      # Step 3: compile-test-checkstyle-package lifecycle
       - name: Build completa
-        run: mvn verify --file roman-number/pom.xml
-
-      - name: Upload Coveralls
-        run: mvn coveralls:report
-        env:
-          COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
+        working-directory: roman-number
+        run: mvn verify
