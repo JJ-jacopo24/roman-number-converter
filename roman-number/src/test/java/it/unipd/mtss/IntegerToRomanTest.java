@@ -34,7 +34,6 @@ public class IntegerToRomanTest {
     public void convertTestVII(){
         //Arrange
         int input=7;
-        String expected="VII";
         //Act
         String t = IntegerToRoman.convert(input);
         //Assert
@@ -45,7 +44,6 @@ public class IntegerToRomanTest {
     public void convertTestIX(){
         //Arrange
         int input=9;
-        String expected="IX";
         //Act
         String t = IntegerToRoman.convert(input);
         //Assert
@@ -56,10 +54,39 @@ public class IntegerToRomanTest {
     public void convertTestX(){
         //Arrange
         int input=10;
-        String expected="X";
         //Act
         String t = IntegerToRoman.convert(input);
         //Assert
         assertEquals("X", t);
+    }
+
+    @Test 
+    public void convertTestXIV(){
+        //Arrange
+        int input=14;
+        //Act
+        String t = IntegerToRoman.convert(input);
+        //Assert
+        assertEquals("XIV", t);
+    }
+
+     @Test 
+    public void convertTestXIX(){
+        //Arrange
+        int input=19;
+        //Act
+        String t = IntegerToRoman.convert(input);
+        //Assert
+        assertEquals("XIX", t);
+    }
+
+     @Test 
+    public void convertTestXX(){
+        //Arrange
+        int input=20;
+        //Act
+        String t = IntegerToRoman.convert(input);
+        //Assert
+        assertEquals("XX", t);
     }
 }
