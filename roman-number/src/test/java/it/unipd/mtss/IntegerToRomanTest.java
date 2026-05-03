@@ -50,7 +50,7 @@ public class IntegerToRomanTest {
         assertEquals("IX", t);
     }
 
-     @Test 
+    @Test 
     public void convertTestX(){
         //Arrange
         int input=10;
@@ -88,5 +88,45 @@ public class IntegerToRomanTest {
         String t = IntegerToRoman.convert(input);
         //Assert
         assertEquals("XX", t);
+    }
+
+    @Test 
+    public void convertTestXL(){
+        //Arrange
+        int input=40;
+        //Act
+        String t = IntegerToRoman.convert(input);
+        //Assert
+        assertEquals("XL", t);
+    }
+
+    @Test 
+    public void convertTestXLIV(){
+        //Arrange
+        int input=44;
+        //Act
+        String t = IntegerToRoman.convert(input);
+        //Assert
+        assertEquals("XLIV", t);
+    }
+
+     @Test 
+    public void convertTestXLIX(){
+        //Arrange
+        int input=49;
+        //Act
+        String t = IntegerToRoman.convert(input);
+        //Assert
+        assertEquals("XLIX", t);
+    }
+
+     @Test 
+    public void convertTestL(){
+        //Arrange
+        int input=50;
+        //Act
+        String t = IntegerToRoman.convert(input);
+        //Assert
+        assertEquals("L", t);
     }
 }
