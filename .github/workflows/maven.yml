@@ -1,4 +1,4 @@
-# Pipeline di Continuous Integration per il progetto Roman Number
+# Pipeline di Continuous Integration
 # Si attiva ad ogni push e ad ogni Pull Request
 
 name: Continuous Integration
@@ -27,7 +27,21 @@ jobs:
           distribution: 'temurin'
           cache: maven
 
-      # Step 3: compile-test-checkstyle-package lifecycle
-      - name: Build completa
-        working-directory: roman-number
-        run: mvn verify
+      # Step 3: Compilazione del progetto (fase compile)
+      - name: Compilazione
+        run: mvn compile --file roman-number/pom.xml
+
+      # Step 4: Esecuzione dei test (fase test)
+      - name: Esecuzione Test
+        run: mvn test --file roman-number/pom.xml
+
+      # Step 5: Analisi statica e package
+      - name: Analisi Statica e Package
+        run: mvn package --file roman-number/pom.xml
+
+        # Step 6: Invio coverage a Coveralls
+      - name: Invio Coverage a Coveralls
+        run: mvn coveralls:report --file roman-number/pom.xml
+        env:
+          COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
+        continue-on-error: true
