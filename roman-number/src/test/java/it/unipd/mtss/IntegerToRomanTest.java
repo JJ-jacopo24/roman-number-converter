@@ -30,4 +30,36 @@ public class IntegerToRomanTest {
         assertEquals("V",t);
     }
 
+    @Test 
+    public void convertTestVII(){
+        //Arrange
+        int input=7;
+        String expected="VII";
+        //Act
+        String t = IntegerToRoman.convert(input);
+        //Assert
+        assertEquals("VII", t);
+    }
+
+     @Test 
+    public void convertTestIX(){
+        //Arrange
+        int input=9;
+        String expected="IX";
+        //Act
+        String t = IntegerToRoman.convert(input);
+        //Assert
+        assertEquals("IX", t);
+    }
+
+     @Test 
+    public void convertTestX(){
+        //Arrange
+        int input=10;
+        String expected="X";
+        //Act
+        String t = IntegerToRoman.convert(input);
+        //Assert
+        assertEquals("X", t);
+    }
 }
