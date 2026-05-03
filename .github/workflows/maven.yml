@@ -36,5 +36,5 @@ jobs:
         run: mvn test --file roman-number/pom.xml
 
       # Step 5: Analisi statica e package
-      - name: Analisi Statica e Package
-        run: mvn package --file roman-number/pom.xml
+      - name: Build completa
+        run: mvn verify --file roman-number/pom.xml
