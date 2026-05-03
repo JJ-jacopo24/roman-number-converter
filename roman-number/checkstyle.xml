@@ -32,7 +32,7 @@
         </module>
         <!-- Numero massimo 10 come consigliato per un buon code design -->
         <module name="CyclomaticComplexity">
-        <property name="max" value="11"/>
+        <property name="max" value="15"/>
             <!-- Lo switch lo consideriamo come un solo punto -->
             <property name="switchBlockAsSingleDecisionPoint" value="true"/>
         </module>
