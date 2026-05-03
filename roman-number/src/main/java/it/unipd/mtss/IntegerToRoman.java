@@ -21,6 +21,16 @@ public class IntegerToRoman {
                     number -= 4;
                     continue;
             }
+            if(number>=50){
+                s += "L";
+                number -= 50;
+                continue;
+            }
+            if(number>=40){
+                    s += "XL";
+                    number -= 40;
+                    continue;
+            }
             if(number>=10){
                 s += "X";
                 number -= 10;
