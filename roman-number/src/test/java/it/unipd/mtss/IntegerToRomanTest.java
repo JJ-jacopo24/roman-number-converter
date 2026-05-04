@@ -388,4 +388,45 @@ public class IntegerToRomanTest {
         //assert
         assertEquals("D",t);
     }
+
+    @Test
+    public void convertTestDCCCLXXXVIII(){
+        //arrange
+        int input = 888;
+        //act
+        String t = IntegerToRoman.convert(input);
+        //assert
+        assertEquals("DCCCLXXXVIII",t);
+    }
+
+
+    @Test
+    public void convertTestCM(){
+        //arrange
+        int input = 900;
+        //act
+        String t = IntegerToRoman.convert(input);
+        //assert
+        assertEquals("CM",t);
+    }
+
+    @Test
+    public void convertTestCMXCIX(){
+        //arrange
+        int input = 999;
+        //act
+        String t = IntegerToRoman.convert(input);
+        //assert
+        assertEquals("CMXCIX",t);
+    }
+
+    @Test
+    public void convertTestM(){
+        //arrange
+        int input = 1000;
+        //act
+        String t = IntegerToRoman.convert(input);
+        //assert
+        assertEquals("M",t);
+    }
 }

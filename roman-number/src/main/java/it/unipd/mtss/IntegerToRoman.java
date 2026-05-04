@@ -21,6 +21,16 @@ public class IntegerToRoman {
                     number -= 9;
                     continue;
             }
+            if(number>=1000){
+                s += "M";
+                number -= 1000;
+                continue;
+            }
+            if(number>=900){
+                s += "CM";
+                number -= 900;
+                continue;
+            }
             if(number>=500){
                 s += "D";
                 number -= 500;
