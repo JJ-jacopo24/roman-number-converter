@@ -48,6 +48,33 @@ public class RomanPrinterTest {
     }
 
     @Test
+    public void printTest4(){
+        //arrange
+        String V =
+        "__      __\n" +
+        "\\ \\    / /\n" +
+        " \\ \\  / / \n" +
+        "  \\ \\/ /  \n" +
+        "   \\  /   \n" +
+        "    \\/    \n";
+        String I =
+        " _____ \n" +
+        "|_   _|\n" +
+        "  | |  \n" +
+        "  | |  \n" +
+        " _| |_ \n" +
+        "|_____|\n";
+
+        String expected = I + V;
+
+        //act
+        String result = RomanPrinter.print(4);
+        System.out.println(RomanPrinter.print(4));
+        //assert
+        assertEquals(expected, result);
+    }
+
+    @Test
     public void printTest5(){
         //arrange
         String expected =
