@@ -11,12 +11,32 @@ import static org.junit.Assert.*;
 public class RomanPrinterTest {
 
     @Test
+    public void print1() {
+        String expected =
+        " _____ \n" +
+        "|_   _|\n" +
+        "  | |  \n" +
+        "  | |  \n" +
+        " _| |_ \n" +
+        "|_____|\n";
 
-    public void placeholder() {
 
-        // TODO: verranno aggiunti test reali
+        System.out.println(RomanPrinter.print(1));
+        assertEquals(expected, RomanPrinter.print(1));
+    }
 
-        assertTrue(true);
+    @Test
+    public void print2() {
+        String I =
+        " _____ \n" +
+        "|_   _|\n" +
+        "  | |  \n" +
+        "  | |  \n" +
+        " _| |_ \n" +
+        "|_____|\n";
 
+        String expected = I + I;
+        System.out.println(RomanPrinter.print(2));
+        assertEquals(expected, RomanPrinter.print(2));
     }
 }
