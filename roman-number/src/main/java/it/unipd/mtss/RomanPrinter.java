@@ -34,6 +34,15 @@ public class RomanPrinter {
             {0,0,0,0,4,5,0,0,0,0}
         };
 
+        int[][] L ={
+            {0,3,0,0,0,0,0,0},
+            {2,0,2,0,0,0,0,0},
+            {2,0,2,0,0,0,0,0},
+            {2,0,2,0,0,0,0,0},
+            {2,0,2,3,3,3,3,0},
+            {2,3,3,3,3,3,3,2}
+        };
+
         Map<Integer, String> mappa = new HashMap<>();
         mappa.put(0, " ");
         mappa.put(1, "-");
@@ -60,14 +69,22 @@ public class RomanPrinter {
             }
             if(c == 'V'){
                 for(int[] riga : V){
-                    String rigaStringa = "";
+                    String rigaString = "";
                     for(int val : riga){
-                        rigaStringa += mappa.get(val);
+                        rigaString += mappa.get(val);
                     }
-                    risultato += rigaStringa + "\n";
+                    risultato += rigaString + "\n";
                 }
             }
-
+            if(c == 'L'){
+                for(int[] riga : L){
+                    String rigaString = "";
+                    for(int val : riga){
+                        rigaString += mappa.get(val);
+                    }
+                    risultato += rigaString + "\n";
+                }
+            }
         }
 
         return risultato;
