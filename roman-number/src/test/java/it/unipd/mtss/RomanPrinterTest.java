@@ -175,12 +175,12 @@ public class RomanPrinterTest {
     public void printTest1000(){
         //arrange
         String expected =
-        " __    __ \n" +
-        "|  \\  /  |\n" +
-        "| \\    / |\n" +
-        "| |\\/\\| |\n" +
-        "| |    | |\n" +
-        "|__    __|\n";
+        " __  __ \n" +
+        "|  \\/  |\n" +
+        "| \\  / |\n" +
+        "| |\\/| |\n" +
+        "| |  | |\n" +
+        "|_|  |_|\n";
 
         //act
         String result = RomanPrinter.print(1000);
