@@ -132,20 +132,20 @@ public class IntegerToRomanTest {
     public void convertTestCX(){
         int input = 90;
         String t = IntegerToRoman.convert(input);
-        assertEquals("CX",t);
+        assertEquals("XC",t);
     }
 
     @Test
     public void convertTestCXIV(){
         int input = 94;
         String t = IntegerToRoman.convert(input);
-        assertEquals("CXIV",t);
+        assertEquals("XCIV",t);
     }
 
     @Test
     public void convertTestCXIX(){
         int input = 99;
         String t = IntegerToRoman.convert(input);
-        assertEquals("CXIX",t);
+        assertEquals("XCIX",t);
     }
 }
