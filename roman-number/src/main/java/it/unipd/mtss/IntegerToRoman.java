@@ -12,14 +12,24 @@ public class IntegerToRoman {
             switch(number){
                 case 0:
                     return s;
-                case 9:
-                    s += "IX";
-                    number -= 9;
-                    continue;
                 case 4:
                     s += "IV";
                     number -= 4;
                     continue;
+                case 9:
+                    s += "IX";
+                    number -= 9;
+                    continue;
+            }
+            if(number>=100){
+                s += "C";
+                number -= 100;
+                continue;
+            }
+            if(number>=90){
+                s += "XC";
+                number -= 90;
+                continue;
             }
             if(number>=50){
                 s += "L";
