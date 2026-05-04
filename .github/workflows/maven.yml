@@ -39,13 +39,10 @@ jobs:
       - name: Analisi Statica e Package
         run: mvn package --file roman-number/pom.xml
 
-        # Step 6: Invio coverage a Coveralls
+      # Step 6: Invio coverage a Coveralls tramite GitHub Action ufficiale
       - name: Invio Coverage a Coveralls
-        run: mvn coveralls:report --file roman-number/pom.xml
-        env:
-          COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
-          CI_NAME: github-actions
-          CI_BUILD_NUMBER: ${{ github.run_id }}
-          CI_BUILD_URL: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
-          CI_BRANCH: ${{ github.ref_name }}
-        continue-on-error: true
+        uses: coverallsapp/github-action@v2
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          path-to-lcov: roman-number/target/site/jacoco/jacoco.xml
+          format: jacoco
