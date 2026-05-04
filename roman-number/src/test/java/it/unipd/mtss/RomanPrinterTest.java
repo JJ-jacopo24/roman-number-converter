@@ -120,6 +120,61 @@ public class RomanPrinterTest {
     }
 
     @Test
+    public void printTest10(){
+        //arrange
+        String expected = 
+        "__   __\n" +
+        "\\ \\ / /\n" +
+        " \\ V / \n" +
+        "  > <  \n" +
+        " / ^ \\ \n" +
+        "/_/ \\_\\\n";
+
+        //act
+        String result = RomanPrinter.print(10);
+        System.out.println(RomanPrinter.print(10));
+        //assert
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void printTest19(){
+        //arrange
+        String expected = 
+        "__   __ _____ __   __\n" +
+        "\\ \\ / /|_   _|\\ \\ / /\n" +
+        " \\ V /   | |   \\ V / \n" +
+        "  > <    | |    > <  \n" +
+        " / ^ \\  _| |_  / ^ \\ \n" +
+        "/_/ \\_\\|_____|/_/ \\_\\\n";
+
+        //act
+        String result = RomanPrinter.print(19);
+        System.out.println(RomanPrinter.print(19));
+        //assert
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void printTest40(){
+        //arrange
+        
+        String expected = 
+        "__   __ _      \n" +
+        "\\ \\ / /| |     \n" +
+        " \\ V / | |     \n" +
+        "  > <  | |     \n" +
+        " / ^ \\ | |____ \n" +
+        "/_/ \\_\\|______|\n";
+
+        //act
+        String result = RomanPrinter.print(40);
+        System.out.println(RomanPrinter.print(40));
+        //assert
+        assertEquals(expected, result);
+    }
+
+    @Test
     public void printTest50(){
         //arrange
         String expected =
