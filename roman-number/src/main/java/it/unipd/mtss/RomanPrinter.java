@@ -25,11 +25,22 @@ public class RomanPrinter {
             {2,3,3,3,3,3,2}
         };
 
+        int[][] V = {
+            {3,3,0,0,0,0,0,0,3,3},
+            {4,0,4,0,0,0,0,5,0,5},
+            {0,4,0,4,0,0,5,0,5,0},
+            {0,0,4,0,4,5,0,5,0,0},
+            {0,0,0,4,0,0,5,0,0,0},
+            {0,0,0,0,4,5,0,0,0,0}
+        };
+
         Map<Integer, String> mappa = new HashMap<>();
         mappa.put(0, " ");
         mappa.put(1, "-");
         mappa.put(2, "|");
         mappa.put(3, "_");
+        mappa.put(4, "\\");
+        mappa.put(5, "/");
 
         for (char c : romanNumber.toCharArray()) {
 
@@ -47,7 +58,15 @@ public class RomanPrinter {
                     risultato += rigaString + "\n"; 
                 }
             }
-
+            if(c == 'V'){
+                for(int[] riga : V){
+                    String rigaStringa = "";
+                    for(int val : riga){
+                        rigaStringa += mappa.get(val);
+                    }
+                    risultato += rigaStringa + "\n";
+                }
+            }
 
         }
 
