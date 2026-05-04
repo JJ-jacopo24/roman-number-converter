@@ -170,4 +170,22 @@ public class RomanPrinterTest {
         //assert
         assertEquals(expected, result);
     }
+
+    @Test
+    public void printTest1000(){
+        //arrange
+        String expected =
+        " __    __ \n" +
+        "|  \\  /  |\n" +
+        "| \\    / |\n" +
+        "| |\\/\\| |\n" +
+        "| |    | |\n" +
+        "|__    __|\n";
+
+        //act
+        String result = RomanPrinter.print(1000);
+        System.out.println(RomanPrinter.print(1000));
+        //assert
+        assertEquals(expected, result);
+    }
 }
