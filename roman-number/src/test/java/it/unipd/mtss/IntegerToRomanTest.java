@@ -129,23 +129,142 @@ public class IntegerToRomanTest {
     }
 
     @Test
-    public void convertTestCX(){
+    public void convertTestXC(){
         int input = 90;
         String t = IntegerToRoman.convert(input);
         assertEquals("XC",t);
     }
 
     @Test
-    public void convertTestCXIV(){
+    public void convertTestXCIV(){
         int input = 94;
         String t = IntegerToRoman.convert(input);
         assertEquals("XCIV",t);
     }
 
     @Test
-    public void convertTestCXIX(){
+    public void convertTestXCIX(){
         int input = 99;
         String t = IntegerToRoman.convert(input);
         assertEquals("XCIX",t);
+    }
+
+    @Test
+    public void convertTestC(){
+        int input = 100;
+        String t = IntegerToRoman.convert(input);
+        assertEquals("C",t);
+    }
+
+    @Test
+    public void convertTestCXXXIX(){
+        int input = 139;
+        String t = IntegerToRoman.convert(input);
+        assertEquals("CXXXIX",t);
+    }
+
+    @Test
+    public void convertTestCXLIX(){
+        int input = 149;
+        String t = IntegerToRoman.convert(input);
+        assertEquals("CXLIX",t);
+    }
+
+    @Test
+    public void convertTestCL(){
+        int input = 150;
+        String t = IntegerToRoman.convert(input);
+        assertEquals("CL",t);
+    }
+
+    @Test
+    public void convertTestCXC(){
+        int input = 190;
+        String t = IntegerToRoman.convert(input);
+        assertEquals("CXC",t);
+    }
+
+    @Test
+    public void convertTestCXCIV(){
+        int input = 194;
+        String t = IntegerToRoman.convert(input);
+        assertEquals("CXCIV",t);
+    }
+
+    @Test
+    public void convertTestCXCIX(){
+        int input = 199;
+        String t = IntegerToRoman.convert(input);
+        assertEquals("CXCIX",t);
+    }
+
+    @Test
+    public void convertTestCCXXV(){
+        int input = 225;
+        String t = IntegerToRoman.convert(input);
+        assertEquals("CCXXV",t);
+    }
+
+    @Test
+    public void convertTestCCXLIX(){
+        int input = 249;
+        String t = IntegerToRoman.convert(input);
+        assertEquals("CCXLIX",t);
+    }
+
+    @Test
+    public void convertTestCCXCIV(){
+        int input = 294;
+        String t = IntegerToRoman.convert(input);
+        assertEquals("CCXCIV",t);
+    }
+
+    @Test
+    public void convertTestCCCIX(){
+        int input = 309;
+        String t = IntegerToRoman.convert(input);
+        assertEquals("CCCIX",t);
+    }
+
+    @Test
+    public void convertTestCCCXLIX(){
+        int input = 349;
+        String t = IntegerToRoman.convert(input);
+        assertEquals("CCCXLIX",t);
+    }
+
+    @Test
+    public void convertTestCCCLX(){
+        int input = 360;
+        String t = IntegerToRoman.convert(input);
+        assertEquals("CCCLX",t);
+    }
+
+    @Test
+    public void convertTestCDIX(){
+        int input = 409;
+        String t = IntegerToRoman.convert(input);
+        assertEquals("CDIX",t);
+    }
+
+    @Test
+    public void convertTestCDLIV(){
+        int input = 454;
+        String t = IntegerToRoman.convert(input);
+        assertEquals("CDLIV",t);
+    }
+
+    @Test
+    public void convertTestCDLXXXIX(){
+        int input = 489;
+        String t = IntegerToRoman.convert(input);
+        assertEquals("CDLXXXIX",t);
+    }
+
+    @Test
+    public void convertTestD(){
+        int input = 500;
+        String t = IntegerToRoman.convert(input);
+        assertEquals("D",t);
     }
 }
