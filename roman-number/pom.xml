@@ -36,6 +36,7 @@
             <failsOnError>true</failsOnError>
             <configLocation>checkstyle.xml</configLocation>
             <consoleOutput>true</consoleOutput>
+            <excludes>**/test/**</excludes>
         </configuration>
         <executions>
             <execution>
