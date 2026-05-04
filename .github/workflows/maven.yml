@@ -44,4 +44,8 @@ jobs:
         run: mvn coveralls:report --file roman-number/pom.xml
         env:
           COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
+          CI_NAME: github-actions
+          CI_BUILD_NUMBER: ${{ github.run_id }}
+          CI_BUILD_URL: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          CI_BRANCH: ${{ github.ref_name }}
         continue-on-error: true
