@@ -46,6 +46,17 @@ public class RomanPrinter {
             {0,0,0,0,4,5,0,0,0,0}
         };
 
+        
+        int[][] X = {
+            	{3,3,0,0,0,3,3},
+            	{4,0,4,0,5,0,5},
+            	{0,4,0,8,0,5,0},
+            	{0,0,6,0,7,0,0},
+            	{0,4,0,9,0,5,0},
+            	{4,3,4,0,5,3,5}
+        };
+
+
         int[][] L ={
             {0,3,0,0,0,0,0,0},
             {2,0,2,0,0,0,0,0},
@@ -67,7 +78,7 @@ public class RomanPrinter {
         Map<Character, int[][]> lettere = new HashMap<>();
         lettere.put('I', I);
         lettere.put('V', V);
-        
+        lettere.put('X', X);
         lettere.put('L', L);
        
         
@@ -85,6 +96,9 @@ public class RomanPrinter {
             }
         }
         String risultato="";
+        for(int i=0; i<6; i++){
+            risultato+=linee[i]+ "\n";
+        }
         return risultato;
 
     }
