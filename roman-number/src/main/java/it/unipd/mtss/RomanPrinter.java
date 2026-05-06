@@ -14,8 +14,20 @@ public class RomanPrinter {
     }
 
     private static String printAsciiArt(String romanNumber) {
-        String risultato = "";
-      
+        String[] linee ={"","","","","",""};
+       
+        Map<Integer, String> mappa = new HashMap<>();
+        mappa.put(0, " ");
+        mappa.put(1, "-");
+        mappa.put(2, "|");
+        mappa.put(3, "_");
+        mappa.put(4, "\\");
+        mappa.put(5, "/");
+        mappa.put(6, ">");
+        mappa.put(7, "<");
+        mappa.put(8, "V");
+        mappa.put(9, "^");
+
         int[][] I = {
             {0,3,3,3,3,3,0},
             {2,3,0,0,0,3,2},
@@ -33,6 +45,17 @@ public class RomanPrinter {
             {0,0,0,4,0,0,5,0,0,0},
             {0,0,0,0,4,5,0,0,0,0}
         };
+
+        
+        int[][] X = {
+            	{3,3,0,0,0,3,3},
+            	{4,0,4,0,5,0,5},
+            	{0,4,0,8,0,5,0},
+            	{0,0,6,0,7,0,0},
+            	{0,5,0,9,0,4,0},
+            	{5,3,5,0,4,3,4}
+        };
+
 
         int[][] L ={
             {0,3,0,0,0,0,0,0},
@@ -52,59 +75,30 @@ public class RomanPrinter {
             {2,3,2,0,0,2,3,2}
         };
 
-        Map<Integer, String> mappa = new HashMap<>();
-        mappa.put(0, " ");
-        mappa.put(1, "-");
-        mappa.put(2, "|");
-        mappa.put(3, "_");
-        mappa.put(4, "\\");
-        mappa.put(5, "/");
+        Map<Character, int[][]> lettere = new HashMap<>();
+        lettere.put('I', I);
+        lettere.put('V', V);
+        lettere.put('X', X);
+        lettere.put('L', L);
+       
+        
+        lettere.put('M', M);
+
 
         for (char c : romanNumber.toCharArray()) {
 
-            if (c == 'I') {
-                for (int[] riga : I) { //per ogni riga di I
+            int[][] matriceLett=lettere.get(c);
 
-                    //ausiliara che aiuta per mappare le righe una alla volta
-                    String rigaString = "";
-
-                    for (int val : riga) { //per ogni valore di una riga
-                        rigaString += mappa.get(val); //aggiungo i valori mappati alla stringa
-                    }
-                    
-                    //aggiungo ogni riga alla stringa risultato andando a capo per ogni riga analizzata
-                    risultato += rigaString + "\n"; 
-                }
-            }
-            if(c == 'V'){
-                for(int[] riga : V){
-                    String rigaString = "";
-                    for(int val : riga){
-                        rigaString += mappa.get(val);
-                    }
-                    risultato += rigaString + "\n";
-                }
-            }
-            if(c == 'L'){
-                for(int[] riga : L){
-                    String rigaString = "";
-                    for(int val : riga){
-                        rigaString += mappa.get(val);
-                    }
-                    risultato += rigaString + "\n";
-                }
-            }
-            if(c == 'M'){
-                for(int[] riga : M){
-                    String rigaString = "";
-                    for(int val : riga){
-                        rigaString += mappa.get(val);
-                    }
-                    risultato += rigaString + "\n";
+            for (int i=0; i<6; i++){
+                for(int val:matriceLett[i]){
+                    linee[i] +=mappa.get(val);
                 }
             }
         }
-
+        String risultato="";
+        for(int i=0; i<6; i++){
+            risultato+=linee[i]+ "\n";
+        }
         return risultato;
 
     }

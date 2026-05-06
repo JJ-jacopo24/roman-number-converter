@@ -31,15 +31,13 @@ public class RomanPrinterTest {
     @Test
     public void printTest2() {
         //arrange
-        String I =
-        " _____ \n" +
-        "|_   _|\n" +
-        "  | |  \n" +
-        "  | |  \n" +
-        " _| |_ \n" +
-        "|_____|\n";
-
-        String expected = I + I;
+        String expected =
+            " _____  _____ \n" +
+            "|_   _||_   _|\n" +
+            "  | |    | |  \n" +
+            "  | |    | |  \n" +
+            " _| |_  _| |_ \n" +
+            "|_____||_____|\n";
         //act
         String result = RomanPrinter.print(2);
         System.out.println(RomanPrinter.print(2));
@@ -50,23 +48,13 @@ public class RomanPrinterTest {
     @Test
     public void printTest4(){
         //arrange
-        String V =
-        "__      __\n" +
-        "\\ \\    / /\n" +
-        " \\ \\  / / \n" +
-        "  \\ \\/ /  \n" +
-        "   \\  /   \n" +
-        "    \\/    \n";
-        String I =
-        " _____ \n" +
-        "|_   _|\n" +
-        "  | |  \n" +
-        "  | |  \n" +
-        " _| |_ \n" +
-        "|_____|\n";
-
-        String expected = I + V;
-
+        String expected =
+            " _____ __      __\n" +
+            "|_   _|\\ \\    / /\n" +
+            "  | |   \\ \\  / / \n" +
+            "  | |    \\ \\/ /  \n" +
+            " _| |_    \\  /   \n" +
+            "|_____|    \\/    \n";
         //act
         String result = RomanPrinter.print(4);
         System.out.println(RomanPrinter.print(4));
@@ -95,26 +83,71 @@ public class RomanPrinterTest {
     @Test
     public void printTest7(){
         //arrange
-        String V =
-        "__      __\n" +
-        "\\ \\    / /\n" +
-        " \\ \\  / / \n" +
-        "  \\ \\/ /  \n" +
-        "   \\  /   \n" +
-        "    \\/    \n";
-        String I =
-        " _____ \n" +
-        "|_   _|\n" +
-        "  | |  \n" +
-        "  | |  \n" +
-        " _| |_ \n" +
-        "|_____|\n";
-
-        String expected = V + I + I;
-
+        String expected =
+            "__      __ _____  _____ \n" +
+            "\\ \\    / /|_   _||_   _|\n" +
+            " \\ \\  / /   | |    | |  \n" +
+            "  \\ \\/ /    | |    | |  \n" +
+            "   \\  /    _| |_  _| |_ \n" +
+            "    \\/    |_____||_____|\n";
         //act
         String result = RomanPrinter.print(7);
         System.out.println(RomanPrinter.print(7));
+        //assert
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void printTest10(){
+        //arrange
+        String expected = 
+        "__   __\n" +
+        "\\ \\ / /\n" +
+        " \\ V / \n" +
+        "  > <  \n" +
+        " / ^ \\ \n" +
+        "/_/ \\_\\\n";
+
+        //act
+        String result = RomanPrinter.print(10);
+        System.out.println(RomanPrinter.print(10));
+        //assert
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void printTest19(){
+        //arrange
+        String expected = 
+        "__   __ _____ __   __\n" +
+        "\\ \\ / /|_   _|\\ \\ / /\n" +
+        " \\ V /   | |   \\ V / \n" +
+        "  > <    | |    > <  \n" +
+        " / ^ \\  _| |_  / ^ \\ \n" +
+        "/_/ \\_\\|_____|/_/ \\_\\\n";
+
+        //act
+        String result = RomanPrinter.print(19);
+        System.out.println(RomanPrinter.print(19));
+        //assert
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void printTest40(){
+        //arrange
+        
+        String expected = 
+        "__   __ _      \n" +
+        "\\ \\ / /| |     \n" +
+        " \\ V / | |     \n" +
+        "  > <  | |     \n" +
+        " / ^ \\ | |____ \n" +
+        "/_/ \\_\\|______|\n";
+
+        //act
+        String result = RomanPrinter.print(40);
+        System.out.println(RomanPrinter.print(40));
         //assert
         assertEquals(expected, result);
     }
@@ -140,30 +173,13 @@ public class RomanPrinterTest {
     @Test
     public void printTest56(){
         //arrange
-        String L =
-        " _      \n" +
-        "| |     \n" +
-        "| |     \n" +
-        "| |     \n" +
-        "| |____ \n" +
-        "|______|\n";
-        String V =
-        "__      __\n" +
-        "\\ \\    / /\n" +
-        " \\ \\  / / \n" +
-        "  \\ \\/ /  \n" +
-        "   \\  /   \n" +
-        "    \\/    \n";
-        String I =
-        " _____ \n" +
-        "|_   _|\n" +
-        "  | |  \n" +
-        "  | |  \n" +
-        " _| |_ \n" +
-        "|_____|\n";
-
-        String expected = L + V + I;
-
+        String expected =
+        " _      __      __ _____ \n" +
+        "| |     \\ \\    / /|_   _|\n" +
+        "| |      \\ \\  / /   | |  \n" +
+        "| |       \\ \\/ /    | |  \n" +
+        "| |____    \\  /    _| |_ \n" +
+        "|______|    \\/    |_____|\n";
         //act
         String result = RomanPrinter.print(56);
         System.out.println(RomanPrinter.print(56));
