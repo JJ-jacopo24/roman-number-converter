@@ -23,7 +23,7 @@ public class RomanPrinterTest {
 
         //act
         String result = RomanPrinter.print(1);
-        System.out.println(RomanPrinter.print(1));
+
         //assert
         assertEquals(expected, result);
     }
@@ -41,7 +41,7 @@ public class RomanPrinterTest {
 
         //act
         String result = RomanPrinter.print(2);
-        System.out.println(RomanPrinter.print(2));
+
         //assert
         assertEquals(expected, result);
     }
@@ -59,7 +59,7 @@ public class RomanPrinterTest {
 
         //act
         String result = RomanPrinter.print(4);
-        System.out.println(RomanPrinter.print(4));
+
         //assert
         assertEquals(expected, result);
     }
@@ -77,7 +77,7 @@ public class RomanPrinterTest {
 
         //act
         String result = RomanPrinter.print(5);
-        System.out.println(RomanPrinter.print(5));
+
         //assert
         assertEquals(expected, result);
     }
@@ -95,7 +95,7 @@ public class RomanPrinterTest {
 
         //act
         String result = RomanPrinter.print(7);
-        System.out.println(RomanPrinter.print(7));
+
         //assert
         assertEquals(expected, result);
     }
@@ -113,7 +113,7 @@ public class RomanPrinterTest {
 
         //act
         String result = RomanPrinter.print(10);
-        System.out.println(RomanPrinter.print(10));
+
         //assert
         assertEquals(expected, result);
     }
@@ -131,7 +131,7 @@ public class RomanPrinterTest {
 
         //act
         String result = RomanPrinter.print(19);
-        System.out.println(RomanPrinter.print(19));
+
         //assert
         assertEquals(expected, result);
     }
@@ -149,7 +149,7 @@ public class RomanPrinterTest {
 
         //act
         String result = RomanPrinter.print(40);
-        System.out.println(RomanPrinter.print(40));
+
         //assert
         assertEquals(expected, result);
     }
@@ -167,7 +167,7 @@ public class RomanPrinterTest {
 
         //act
         String result = RomanPrinter.print(50);
-        System.out.println(RomanPrinter.print(50));
+
         //assert
         assertEquals(expected, result);
     }
@@ -185,7 +185,7 @@ public class RomanPrinterTest {
 
         //act
         String result = RomanPrinter.print(56);
-        System.out.println(RomanPrinter.print(56));
+
         //assert
         assertEquals(expected, result);
     }
@@ -203,7 +203,7 @@ public class RomanPrinterTest {
 
         //act
         String result = RomanPrinter.print(90);
-        System.out.println(RomanPrinter.print(90));
+
         //assert
         assertEquals(expected, result);
     }
@@ -221,7 +221,7 @@ public class RomanPrinterTest {
 
         //act
         String result = RomanPrinter.print(100);
-        System.out.println(RomanPrinter.print(100));
+
         //assert
         assertEquals(expected, result);
     }
@@ -239,7 +239,7 @@ public class RomanPrinterTest {
 
         //act
         String result = RomanPrinter.print(400);
-        System.out.println(RomanPrinter.print(400));  
+
         //assert
         assertEquals(expected, result);
     }
@@ -257,7 +257,7 @@ public class RomanPrinterTest {
 
         //act
         String result = RomanPrinter.print(500);
-        System.out.println(RomanPrinter.print(500));
+
         //assert
         assertEquals(expected, result);
     }
@@ -275,7 +275,7 @@ public class RomanPrinterTest {
         
         //act
         String result = RomanPrinter.print(888);
-        System.out.println(RomanPrinter.print(888));
+
         //assert
         assertEquals(expected, result);
     }
@@ -293,7 +293,7 @@ public class RomanPrinterTest {
 
         //act
         String result = RomanPrinter.print(900);
-        System.out.println(RomanPrinter.print(900));        
+
         //assert
         assertEquals(expected, result);
     }
@@ -311,7 +311,7 @@ public class RomanPrinterTest {
 
         //act
         String result = RomanPrinter.print(999);
-        System.out.println(RomanPrinter.print(999));
+
         //assert
         assertEquals(expected, result);
     }
@@ -329,7 +329,7 @@ public class RomanPrinterTest {
 
         //act
         String result = RomanPrinter.print(1000);
-        System.out.println(RomanPrinter.print(1000));
+
         //assert
         assertEquals(expected, result);
     }
